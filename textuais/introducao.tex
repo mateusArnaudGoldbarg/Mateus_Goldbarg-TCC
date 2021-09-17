@@ -1,0 +1,71 @@
+\chapter[Introdução]{Introdução}
+\label{ch:introdução}
+
+A Inteligência Artificial é um campo que vem oferecendo, e que ainda oferecerá, muitas oportunidades para mercados emergentes e serviços revolucionando assim quase todos os segmentos da sociedade atual. Com as técnicas de aprendizado de máquina (machine learning), é possível fornecer uma ferramenta de alta precisão para resolver problemas de classificação e previsão, como reconhecimento de padrões ou síntese de fala. A Inteligência Artificial já está presente em uma gama de atividades do dia-a-dia como, por exemplo, publicidade, finanças, multimídia, visão computacional, jogos eletrônicos e outras. No entanto, ela requer processamento intensivo e hardwares de alto desempenho, e isso pode ser um problema para aplicações de IoT cujo alvo são hardwares de baixo consumo energético. 
+
+Atualmente, a maioria das técnicas mais convencionais de otimização por poda (pruning) realiza a remoção de pesos apenas uma vez por época (normalmente apenas no primeiro \textit{batch}). Neste trabalho é proposto um esquema de compressão de modelo por poda, com remoção dos pesos em todos os \textit{batchs} de todas as épocas, durante o treinamento, em dataset de imagens.
+
+\section{Contextualização e Motivação}
+Técnicas de aprendizado profundo (deep learning), como redes neurais profundas, têm sido usados com sucesso na resolução de muitos problemas. Porém, algoritmos desse tipo requerem muitas operações numéricas e esses cálculos podem ser um gargalo para o processamento de muitos dados em um curto período de tempo. Assim, o processamento de redes neurais convolucionais incorre em alto consumo de energia devido sua alta complexidade computacional \cite{nvidea2015}.
+
+O estudo sobre as formas de acelerar a computação no aprendizado profundo tem sido um foco no aprendizado de máquina, e sua literatura tem crescido rapidamente. Uma das abordagens convencionais de compressão é a poda (pruning), que remove parâmetros sistematicamente de uma rede já existente \cite{blalock2020}. O desafio é remover esses parâmetros e diminuir o tamanho da rede de forma que afete minimamente a sua acurácia. A remoção desses parâmetros resulta na diminuição da quantidade de operações matemáticas necessárias.
+
+%A quantidade de operações numéricas realizadas em algoritmos embarcados tem grande influência no consumo energético em microcontroladores, por exemplo. A redução da quantidade de parametros nas redes neurais resultam na diminuição da quantidade dessas operações, resultando em uma significativa redução no consumo energético. Assim, é possível obter o mesmo resultado esperado para uma rede neural, consumindo menos energia que o necessário para uma rede não comprimida.
+
+
+%\begin{citacao}[brazil]
+%[...] redes elétricas que podem, de forma inteligente, integrar o comportamento e as ações de todos os usuários conectados a ela, como geradores, consumidores e os que desempenham as duas funções, para entregar, eficientemente, um fornecimento de eletricidade sustentável, econômico e seguro \cite[p. 51, tradução livre]{yu2011new}.
+%\end{citacao}
+
+%Para compreender melhor as grandes mudanças e os benefícios gerados pelas \textit{Smart Grids} no contexto %do fornecimento elétrico, a \autoref{tab-comparativa} traz um breve comparativo entre as redes tradicionais %e as redes inteligentes.
+
+%\begin{table}[!ht]
+%\centering
+%\resizebox{\textwidth}{!}{%
+%\begin{tabular}{ll}
+%\hline
+%\multicolumn{1}{c}{\textbf{Redes Elétricas Tradicionais}} & \multicolumn{1}{c}{\textbf{Redes Elétricas %Inteligentes}}                 \\ \hline
+%\rowcolor[HTML]{DDDDDD} 
+%Eletromecânica, estado sólido                             & Digital/Microprocessadores                     %                           \\
+%Unidirecional e localmente bidirecional                   & Global/comunicação bidirecional integrada      %                           \\
+%\rowcolor[HTML]{DDDDDD} 
+%Geração centralizada                                      & Acomoda geração distribuída                    %                           \\
+%{Controle, monitoramento e proteção limitados}  & WAMPAC, proteção adaptativa \\
+%\rowcolor[HTML]{DDDDDD} 
+%"Cega"                                                    & Auto-monitoramento                                                        \\
+%Recuperação manual                                        & Auto-reconfigurável                                                       \\
+%\rowcolor[HTML]{DDDDDD} 
+%Checagem manual de equipamentos                           & Monitoração remota de equipamentos                                        \\
+%Sistema de controle de contingências limitado             & Sistema de controle pervasivo                                             \\
+%\rowcolor[HTML]{DDDDDD} 
+%Confiabilidade estimada                                   & Confiabilidade preditiva                                                 
+%\end{tabular}%
+%}
+%\caption{Comparação entre redes elétricas convencionais e redes elétricas inteligentes}
+%\label{tab-comparativa}
+%\fonte{\cite[p. 28, tradução nossa]{ali2013smart}}
+%\end{table}
+
+\section{Resumo bibliográfico}
+Em \cite{blalock2020} os autores propõem a utilização da técnica de poda e avaliação dos resultados com modelos de redes neurais e diferentes datasets baseados no tamanho do modelo, velocidade e acurácia.
+
+No artigo \cite{han2015} os autores sugerem a redução do tamanho do modelo e da energia requerida para inferencia de uma rede neural, utilizando técnicas de compressão, para ser utilizada em dispositivos móveis.
+
+Em \cite{fernandes2021} os autores propõem a compressão de dados utilizando as técnicas de poda e quantização aplicadas a classificação viral.
+
+Em \cite{huang2018} é proposto a utilização da técnica de compressão de poda de filtros nas camadas convolucionais, em redes neurais convolucionais, e introduz o algoritmo de try-and-learn no aprendizado de máquina.
+
+No artigo \cite{yang2017} os autores trazem a análise de consumo de energia em redes neurais convolucionais antes e depois da utilização da técnica de compressão por poda em todas as camadas dos modelos utilizados, reduzindo o número de parâmetros, seu tamanho e a  complexidade do algorítmo.
+
+No artigo \cite{reed1993} o autor propõe a utilização do algoritmo de poda em uma rede neural já treinada e analíse da eficiência do modelo após sua aplicação.
+
+Em \cite{nvidea2015} os autores propõem um estudo sobre o consumo energético durante a inferência de redes neurais convolucionais.
+
+Diante do apresentado, é notável que a técnica de compressão de dados por poda está sendo implementada e analisada em diferentes contextos, mas com o  objetivo de redução do tamanho e da complexidade das redes neurais já treinadas tanto para forma de análise quanto para aplicações em sistemas embarcados para diminuição do consumo energético. Porém, a utilização da remoção de pesos em todos os \textit{batchs} foi muito pouco explorado, sendo utilizado apenas uma vez para classificação viral.
+
+
+\section{Objetivo}
+O objetivo deste trabalho é desenvolver a técnica de compressão de redes neurais profundas por poda, utilizando um dataset de classificação de imagens, aplicando a técnica de remoção de pesos por poda a cada \textit{batch} e analisar a quantidade de pesos que podem ser removidos sem que a acurácia do modelo seja muito prejudicada.
+
+\section{Estrutura do Trabalho}
+Este trabalho apresenta uma introdução sobre o tema, mostrando os fatores que motivam a implantação da ideia, além da motivação e dos objetivos. Em sequência, o \autoref{ch:cap2} aborda os principais conceitos teóricos e técnicos utilizados no trabalho. O \autoref{ch:cap3}, por sua vez, descreve os detalhes de organização e implementação de todas as partes da ténica proposta, bem como os procedimentos adotados para os testes e validação, enquanto o \autoref{ch:cap4} trata de mostrar os resultados obtidos experimentalmente e apresenta discussões a respeito destes resultados. Por fim, o \autoref{ch:cap5} traz as principais conclusões e contribuições deste trabalho.

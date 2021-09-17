@@ -1,0 +1,15 @@
+\chapter[Conclusão]{Conclusão}
+\label{ch:cap5}
+
+Conforme exposto no capítulo 4, podemos notar que:
+
+\begin{itemize}
+   \item O loop de aprendizado, realizando a poda por batch, foi capaz de executar o treinamento e validação como esperado;
+   \item A estratégia de remover os pesos a partir da criação de uma máscara, com o mesmo formato da camada sendo preenchida com zero ou um a depender do limiar estabelecido, multiplicada pela camada em análise demonstrou-se eficaz;
+   \item A partir da modificação da variável $\alpha$ altetar o limiar desejado definindo a agressividade da poda;
+   \item É possível obter uma acurácia com a rede neural comprimida muito próxima da rede não comprimida utilizando a técnica de poda;
+   \item A remoção dos pesos resultou no modelo esparso, sendo que quanto mais pesos são removidos, maior a esparsidade do modelo ao final do treinamento;
+   \item A partir de uma certa esparsidade, a acurácia da rede cai rapidamente, mostrando que existe um certo limite para que o efeito da poda afete a acurácia do modelo minimamente.
+\end{itemize}
+
+Conclui-se portanto que a utilização da técnica de compressão por poda a cada batch é capaz de gerar um modelo menor (com menos parâmetros) que a rede neural original, mantendo uma acurácia alta. A variação do valor do limiar afeta diretamente a esparsidade do modelo, ou seja, quantos parâmetros são removidos. Valores de limiar muito altos podem fazer com que a rede tenha uma acurácia baixa. Levando em conta que a diminuição de parâmetros do modelo implicam em menos operações matemáticas, trabalhos futuros podem ser realizados utilizando a rede neural comprimida em microcontroladores de baixo consumo energético analisando a energia necessária para a inferência comparando as redes neurais comprimidas e não comprimidas.

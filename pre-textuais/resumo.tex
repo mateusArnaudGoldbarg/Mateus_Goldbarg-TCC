@@ -1,0 +1,23 @@
+% resumo na língua vernácula (obrigatório)
+\setlength{\absparsep}{18pt} % ajusta o espaçamento dos parágrafos do resumo
+\begin{resumo}
+Técnicas de redes neurais profundas tem sido utilizadas com sucesso para classificação de imagens a partir da utilização de redes neurais convolucionais. Porém, algoritmos de deep learning realizam uma grande quantidade de operações matemáticas. Essas operações podem ser um gargalo no processo de grandes quantidades de imagens em um curto período de tempo. Em microcontroladores de baixo custo, essas operações podem resultar em um aumento significativo do consumo energético, mostrando assim a necessidade da aplicação de técnicas de compressão dessas redes. Atualmente, a maioria das redes profundas utilizadas para classificação de imagens não são otimizadas. A proposta deste trabalho é otmizar uma rede neural convolucional a partir da técnica de compressão de dados por poda. Durante o treino, a técnica é remover os pesos a cada \textit{batch} ao invés da remoção dos pesos apenas no primeiro \textit{batch} de cada época. Essa estratégia foi aplicada para classificação de 10 mil imagens de 10 classes diferentes. Foi possível remover aproximadamente 82\% dos parâmetros da rede neural profunda mantendo uma alta acurácia. Esses resultados mostram que a técnica de remoção de pesos por \textit{batch} se mostrou eficaz para essa aplicação.
+
+
+\textbf{Palavras-chaves}: Classificação de imagens. Redes Neurais Profundas. Compressão de Modelo. Poda. Treinamento de Modelo.
+
+\end{resumo}
+% ---
+% resumo em inglês
+\begin{resumo}[Abstract]
+	\begin{otherlanguage*}{english}
+	Deep neural network techniques have been successfully used for image classification using convolutional neural networks. However, deep learning algorithms perform a lot of mathematical operations. These operations can be a bottleneck in the process of large amounts of images. In low-cost microcontrollers, these operations can result in a significant increase in energy consumption, showing the need to apply compression techniques for these networks. Currently, most of the deep networks used for image classification are not optimized. The purpose of this work is to optimize a convolutional neural network using the technique of data compression by pruning. During training, the technique is to remove the weights at each batch, instead of removing weights only in the first batch of each epoch. This strategy was applied to classify 10,000 images from 10 different classes. It was possible to remove approximately 82\% of the parameters from the deep neural network while maintaining high accuracy. These results shows that the batch weight removal technique proved to be effective for this application.
+%	
+%	Write here your abstract with the same rules.
+%	\lipsum[1-1]
+	
+%	\vspace{\onelineskip}
+%	\noindent 
+	\textbf{Keywords}: Image classification. Deep Neural Networks. Model Compression. Pruning. Model Training.
+	\end{otherlanguage*}
+\end{resumo}
